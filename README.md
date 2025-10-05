@@ -25,6 +25,7 @@ En nuestro caso lo implementamos de la siguiente manera:
 ## Reflexiones
 
 - ¿Por qué el estado no persiste al rotar? Relacionar con ciclo de vida, recreación de actividad y recomposición.
+Cuando la orientación de la pantalla cambia (por ejemplo, al girar el dispositivo), Android destruye y recrea la actividad correspondiente. Este proceso provoca que se llame al método onCreate() nuevamente, lo que reinicia toda la configuración y los estados de la actividad. Jetpack Compose utiliza la recomposición para actualizar la UI en función de los cambios de estado. Sin embargo, las variables que se declaran con remember solo persisten durante la composición actual.
 - ¿Por qué el ViewModel resuelve el problema de la Parte 1? Conecta con “única fuente de la verdad” y manejo del ciclo de vida.
 - ¿Qué ventajas ofrece compartir un ViewModel entre destinos frente a pasar argumentos de navegación?
   
