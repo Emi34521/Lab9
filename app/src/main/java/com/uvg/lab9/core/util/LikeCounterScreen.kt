@@ -9,7 +9,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun LikeCounterScreen() {
-    var likeCount by remember { mutableStateOf(0) }
+    var likeCount by remember { mutableIntStateOf(0) }
 
     Scaffold { padding ->
         Column(
