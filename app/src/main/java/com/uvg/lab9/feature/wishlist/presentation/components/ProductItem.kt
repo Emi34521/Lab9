@@ -26,7 +26,7 @@ fun ProductItem(
         Text(text = product.name)
         IconButton(onClick = { onToggleWishlist(product.id) }) {
             val icon = if (product.isWishlisted) Icons.Default.Favorite else Icons.Default.FavoriteBorder
-            Icon(imageVector = icon, contentDescription = null)
+            Icon(imageVector = icon, contentDescription = "wishlist icon")
         }
     }
 }

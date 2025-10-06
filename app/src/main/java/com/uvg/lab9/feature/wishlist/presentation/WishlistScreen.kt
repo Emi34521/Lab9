@@ -9,8 +9,9 @@ import com.uvg.lab9.feature.wishlist.presentation.components.ProductItem
 @Composable
 fun WishlistScreen(viewModel: WishlistViewModel) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    // ui-viewmodel coneccion, transforma statflows a jetpack state
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(Unit) {// correr funciones de manera segura en lifecycle
         viewModel.loadProducts()
     }
 
